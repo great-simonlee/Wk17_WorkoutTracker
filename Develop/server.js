@@ -1,7 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const controller = require("./routes/api.js")
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,7 +18,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutTracker"
     useFindAndModify: false
 });
 
-app.use(controller);
+require("./seeders/seed.js");
+require("./routes/htmlRoute.js")(app);
+require("./routes/apiRoute.js")(app);
 
 app.listen(PORT, () => {
     console.log("Server is listening on: " + PORT);
