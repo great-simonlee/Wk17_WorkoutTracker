@@ -34,7 +34,7 @@ The user should be able to:
 
 ## Demo
 
-![Portfolio Demo]()
+![Portfolio Demo](https://github.com/great-simonlee/Wk17_WorkoutTracker/blob/main/workoutTrackerDemo.gif)
 
 ## Features
 
